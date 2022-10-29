@@ -19,6 +19,8 @@
 		27D36535290C246A00EE085E /* ZipCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36534290C246A00EE085E /* ZipCodeViewController.swift */; };
 		27D36537290C683B00EE085E /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36536290C683B00EE085E /* Navigation.swift */; };
 		27D36540290CA4AA00EE085E /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3653F290CA4AA00EE085E /* Storyboardable.swift */; };
+		27D36548290DB61800EE085E /* ZipCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36547290DB61800EE085E /* ZipCodeViewModel.swift */; };
+		27D3654A290DB68A00EE085E /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36549290DB68A00EE085E /* Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		27D36534290C246A00EE085E /* ZipCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeViewController.swift; sourceTree = "<group>"; };
 		27D36536290C683B00EE085E /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		27D3653F290CA4AA00EE085E /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		27D36547290DB61800EE085E /* ZipCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeViewModel.swift; sourceTree = "<group>"; };
+		27D36549290DB68A00EE085E /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +117,8 @@
 		27D36539290C9A6500EE085E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27D36500290B3C7000EE085E /* SchoolsViewController.swift */,
 				27D36534290C246A00EE085E /* ZipCodeViewController.swift */,
+				27D36500290B3C7000EE085E /* SchoolsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -130,6 +134,7 @@
 		27D3653B290C9ADC00EE085E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				27D36547290DB61800EE085E /* ZipCodeViewModel.swift */,
 				27D3652C290B3DB800EE085E /* SchoolsViewModel.swift */,
 			);
 			path = "View Models";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				27D3653F290CA4AA00EE085E /* Storyboardable.swift */,
+				27D36549290DB68A00EE085E /* Container.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -299,6 +305,8 @@
 				27D36537290C683B00EE085E /* Navigation.swift in Sources */,
 				27D36540290CA4AA00EE085E /* Storyboardable.swift in Sources */,
 				27D36501290B3C7000EE085E /* SchoolsViewController.swift in Sources */,
+				27D36548290DB61800EE085E /* ZipCodeViewModel.swift in Sources */,
+				27D3654A290DB68A00EE085E /* Container.swift in Sources */,
 				27D3652F290B3DE200EE085E /* SchoolDetailsModel.swift in Sources */,
 				27D364FD290B3C7000EE085E /* AppDelegate.swift in Sources */,
 			);

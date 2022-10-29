@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="2948" y="-28"/>
         </scene>
-        <!--Find Schools Near You-->
+        <!--Find Near By Schools-->
         <scene sceneID="CrS-Td-zIW">
             <objects>
                 <viewController storyboardIdentifier="ZipCodeViewController" id="6LT-yn-zuA" customClass="ZipCodeViewController" customModule="NYC_High_Schools" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,10 +89,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0tC-zk-Duf">
-                                <rect key="frame" x="16" y="321" width="358" height="154.33333333333337"/>
+                                <rect key="frame" x="16" y="289" width="358" height="170.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wnZ-gu-SCA">
-                                        <rect key="frame" x="8" y="0.0" width="342" height="82.333333333333329"/>
+                                        <rect key="frame" x="8" y="0.0" width="342" height="98.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your zip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-RT-Kdp">
                                                 <rect key="frame" x="0.0" y="0.0" width="342" height="26.333333333333332"/>
@@ -101,23 +101,29 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g, 10003" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFs-Oj-DJL">
-                                                <rect key="frame" x="0.0" y="34.333333333333314" width="342" height="48"/>
+                                                <rect key="frame" x="0.0" y="34.333333333333314" width="342" height="64"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="FnR-V5-dlg"/>
+                                                    <constraint firstAttribute="height" constant="64" id="FnR-V5-dlg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="postal-code"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="6LT-yn-zuA" id="Ru4-l6-AG3"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lac-93-06r">
-                                        <rect key="frame" x="51" y="106.33333333333331" width="256" height="48"/>
+                                        <rect key="frame" x="51" y="122.33333333333331" width="256" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="YYp-hs-jrc"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="cCs-uB-raI"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Find"/>
+                                        <connections>
+                                            <action selector="didTapOnFind:" destination="6LT-yn-zuA" eventType="touchUpInside" id="JQM-n5-Ej4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -130,30 +136,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0tC-zk-Duf" firstAttribute="leading" secondItem="TZ7-OA-ZAK" secondAttribute="leading" constant="16" id="K6z-Sm-9K9"/>
-                            <constraint firstItem="0tC-zk-Duf" firstAttribute="centerY" secondItem="TZ7-OA-ZAK" secondAttribute="centerY" constant="-24" id="jzP-ef-GvN"/>
+                            <constraint firstItem="0tC-zk-Duf" firstAttribute="centerY" secondItem="TZ7-OA-ZAK" secondAttribute="centerY" constant="-48" id="jzP-ef-GvN"/>
                             <constraint firstAttribute="trailing" secondItem="0tC-zk-Duf" secondAttribute="trailing" constant="16" id="qTo-Aj-TkV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Find Schools Near You" id="Zxz-MR-jZ3"/>
+                    <navigationItem key="navigationItem" title="Find Near By Schools" id="Zxz-MR-jZ3"/>
+                    <connections>
+                        <outlet property="findButton" destination="lac-93-06r" id="6ez-JS-Q8X"/>
+                        <outlet property="zipCodeTextField" destination="RFs-Oj-DJL" id="lJs-dd-hsf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4h-Eb-bKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.6153846153845" y="-28.436018957345969"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="daf-iM-WK0">
-            <objects>
-                <navigationController storyboardIdentifier="MainNavigationID" automaticallyAdjustsScrollViewInsets="NO" id="uS9-yj-3rw" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tgx-kx-a47">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yck-id-ppm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1070.7692307692307" y="-28.436018957345969"/>
         </scene>
     </scenes>
     <resources>

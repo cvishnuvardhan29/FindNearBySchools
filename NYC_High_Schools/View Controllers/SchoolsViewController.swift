@@ -7,29 +7,28 @@
 
 import UIKit
 
-protocol Container {
-    associatedtype ViewModel
-    var viewModel: ViewModel? { get set }
-}
-
 class SchoolsViewController: UITableViewController, Container, Storyboardable {
     
-    typealias ViewModel = SchoolsViewModel
+    // MARK: - Container Properties
     
-    var viewModel: SchoolsViewModel?
+    typealias ViewModel = SchoolViewModelType
+    var viewModel: SchoolViewModelType?
 
+    // MARK: - View Controller Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    // MARK: - Helper Methods
+    
     private func registerTableViewCells() {
         self.tableView.register(SchoolTableViewCell.self, forCellReuseIdentifier: SchoolTableViewCell.identifier)
     }
-
 }
 
-// MARK: TableView DataSource
+// MARK: - TableView DataSource
+
 extension SchoolsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.getNumberOfSchools() ?? 0

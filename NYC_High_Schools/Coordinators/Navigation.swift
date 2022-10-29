@@ -8,11 +8,12 @@
 import UIKit
 
 class AppCoordinator {
-    private let navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
+    // MARK: - Properties
+    
+    private let navigationController = UINavigationController()
+    
+    // MARK: - Public API
     
     var rootViewContoller: UIViewController {
         return navigationController
@@ -22,13 +23,17 @@ class AppCoordinator {
         // Initialize ZipCode View Controller
         let zipCodeViewController = ZipCodeViewController.instantiate()
         
+        zipCodeViewController.didShowSchools = { [weak self] in
+            self?.showSchools()
+        }
+        
         // Push ZipCode View Controller Onto Navigaion Stack
         navigationController.pushViewController(zipCodeViewController, animated: true)
     }
     
     // MARK: - Helper Methods
     
-    func navigateToSchoolsViewController() {
+    private func showSchools() {
         // Initialize Schools View Controller
         let schoolsViewController = SchoolsViewController.instantiate()
         
