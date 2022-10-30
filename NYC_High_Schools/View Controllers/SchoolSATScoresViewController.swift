@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SchoolSATScoresViewController: UIViewController, Container, Storyboardable {
+class SchoolSATScoresViewController: MainViewController, Container {
     
     // MARK: - Outlet Properties
     @IBOutlet weak var mainStackView: UIStackView!
@@ -41,11 +41,13 @@ class SchoolSATScoresViewController: UIViewController, Container, Storyboardable
     // MARK: - Helper Methods
     
     private func initialSetup() {
+        isAnimating = true
         mainStackView.isHidden = true
     }
     
     private func configureData() {
         mainStackView.isHidden = false
+        isAnimating = false
         guard let scores = viewModel?.getScoreDetails() else {
             self.handleNoScores()
             return

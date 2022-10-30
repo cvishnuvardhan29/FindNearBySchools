@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZipCodeViewController: UIViewController, Container, Storyboardable {
+class ZipCodeViewController: MainViewController, Container {
           
     // MARK: - Outlet Properties
     

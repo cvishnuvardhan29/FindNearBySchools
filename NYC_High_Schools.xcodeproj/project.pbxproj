@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27C3C8B9290EDEB100DFB2C5 /* ScoresLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8B8290EDEB100DFB2C5 /* ScoresLabel.swift */; };
+		27C3C8BB290EF26600DFB2C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8BA290EF26600DFB2C5 /* MainViewController.swift */; };
 		27D364FD290B3C7000EE085E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D364FC290B3C7000EE085E /* AppDelegate.swift */; };
 		27D36501290B3C7000EE085E /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36500290B3C7000EE085E /* SchoolsViewController.swift */; };
 		27D36504290B3C7000EE085E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D36502290B3C7000EE085E /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		27C3C8B8290EDEB100DFB2C5 /* ScoresLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresLabel.swift; sourceTree = "<group>"; };
+		27C3C8BA290EF26600DFB2C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		27D364F9290B3C7000EE085E /* NYC_High_Schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYC_High_Schools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D364FC290B3C7000EE085E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D36500290B3C7000EE085E /* SchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				27D36534290C246A00EE085E /* ZipCodeViewController.swift */,
 				27D36500290B3C7000EE085E /* SchoolsViewController.swift */,
 				27D36558290E52A300EE085E /* SchoolSATScoresViewController.swift */,
+				27C3C8BA290EF26600DFB2C5 /* MainViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				27D36535290C246A00EE085E /* ZipCodeViewController.swift in Sources */,
 				27C3C8B9290EDEB100DFB2C5 /* ScoresLabel.swift in Sources */,
 				27D36553290E4B8D00EE085E /* CellIdentifiable.swift in Sources */,
+				27C3C8BB290EF26600DFB2C5 /* MainViewController.swift in Sources */,
 				27D36537290C683B00EE085E /* Navigation.swift in Sources */,
 				27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */,
 				27D3654D290E137B00EE085E /* APIManager.swift in Sources */,

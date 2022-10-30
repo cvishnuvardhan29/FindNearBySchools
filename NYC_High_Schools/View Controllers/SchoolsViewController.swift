@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SchoolsViewController.swift
 //  NYC_High_Schools
 //
 //  Created by Vishnu Chundi on 10/28/22.
@@ -7,10 +7,12 @@
 
 import UIKit
 
-class SchoolsViewController: UITableViewController, Container, Storyboardable {
+class SchoolsViewController: MainViewController, Container {
+        
+    @IBOutlet var tableView: UITableView!
     
     // MARK: - Container Properties
-    
+
     typealias ViewModel = SchoolViewModelType
     var viewModel: SchoolViewModelType? {
         didSet {
@@ -27,6 +29,7 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        isAnimating = true
         // Fetching the schools
         viewModel?.fetchSchools()
     }
@@ -36,31 +39,40 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
     private func registerTableViewCells() {
         self.tableView.register(SchoolTableViewCell.self, forCellReuseIdentifier: SchoolTableViewCell.identifier)
     }
-    
-    // MARK: - TableView DataSource
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+// MARK: - TableView DataSource
+
+extension SchoolsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.getNumberOfSchools() ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SchoolTableViewCell.identifier, for: indexPath) as? SchoolTableViewCell else { return UITableViewCell() }
         if let school = viewModel?.getSchool(at: indexPath.row) {
             cell.configureData(for: school)
         }
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+}
+
+// MARK: - TableView Delegate
+
+extension SchoolsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let dbn = viewModel?.getSchool(at: indexPath.row).dbn {
             self.didShowSATScores?(dbn)
         }
     }
 }
 
+// MARK: - SchoolsViewModel Delegate
+
 extension SchoolsViewController: SchoolsViewModelDelegate {
     func reloadSchools() {
         DispatchQueue.main.async {
+            self.isAnimating = false
             self.tableView.reloadData()
         }
     }
