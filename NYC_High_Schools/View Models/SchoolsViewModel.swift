@@ -11,7 +11,7 @@ protocol SchoolViewModelType {
     var delegate: SchoolsViewModelDelegate? { get set }
     
     func fetchSchools()
-    func getSchool(at index: Int) -> SchoolDetails
+    func getSchool(at index: Int) -> School
     func getNumberOfSchools() -> Int
 }
 
@@ -23,7 +23,7 @@ protocol SchoolsViewModelDelegate: AnyObject {
 class SchoolsViewModel: SchoolViewModelType {
     // MARK: - Properties
     var apiManager: APIManager
-    var schools: [SchoolDetails] = []
+    var schools: [School] = []
     weak var delegate: SchoolsViewModelDelegate?
     
     // MARK: - Initializer Method
@@ -36,7 +36,7 @@ class SchoolsViewModel: SchoolViewModelType {
     
     // Making get near by schools API with dummy Zip Code
     func fetchSchools() {
-        apiManager.request(endpoint: SchoolsEndpoint.getNearBySchools(zipCode: "10003")) { (result: Result<[SchoolDetails], APIError>) in
+        apiManager.request(endpoint: SchoolsEndpoint.getNearBySchools(zipCode: "10003")) { (result: Result<[School], APIError>) in
             switch result {
             case .success(let schools):
                 self.schools = schools
@@ -48,7 +48,7 @@ class SchoolsViewModel: SchoolViewModelType {
     }
     
     // Get School Details for Particular Index
-    func getSchool(at index: Int) -> SchoolDetails {
+    func getSchool(at index: Int) -> School {
         schools[index]
     }
     

@@ -29,7 +29,7 @@ class SchoolTableViewCell: UITableViewCell, CellIdentifiable {
     
     // MARK: - Helper Methods
     
-    func configureData(for school: SchoolDetails) {
+    func configureData(for school: School) {
         // Setting School Name
         nameLabel.text = school.schoolName
         

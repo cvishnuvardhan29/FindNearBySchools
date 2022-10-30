@@ -17,6 +17,10 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
             viewModel?.delegate = self
         }
     }
+    
+    // MARK: - Properties
+    
+    var didShowSATScores: ((String) -> Void)?
 
     // MARK: - View Controller Life Cycle
     
@@ -45,6 +49,12 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
             cell.configureData(for: school)
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let dbn = viewModel?.getSchool(at: indexPath.row).dbn {
+            self.didShowSATScores?(dbn)
+        }
     }
 }
 

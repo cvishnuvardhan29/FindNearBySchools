@@ -37,10 +37,25 @@ class AppCoordinator {
         // Initialize Schools View Controller
         let schoolsViewController = SchoolsViewController.instantiate()
         
+        schoolsViewController.didShowSATScores = { [weak self] dbn in
+            self?.showSchoolSATScores(dbn: dbn)
+        }
+        
         // Configure View Model
         schoolsViewController.viewModel = SchoolsViewModel()
         
         // Push Schools View Controller Onto Navigaion Stack
         navigationController.pushViewController(schoolsViewController, animated: true)
+    }
+    
+    private func showSchoolSATScores(dbn: String) {
+        // Initialize School SAT Scores View Controller
+        let satScoresViewController = SchoolSATScoresViewController.instantiate()
+        
+        // Configure View Model
+        satScoresViewController.viewModel = SchoolSATScoresViewModel(dbn: dbn)
+        
+        // Push School SAT Scores View Controller Onto Navigaion Stack
+        navigationController.pushViewController(satScoresViewController, animated: true)
     }
 }

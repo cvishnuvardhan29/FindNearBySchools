@@ -14,7 +14,7 @@
 		27D36509290B3C7100EE085E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D36507290B3C7100EE085E /* LaunchScreen.storyboard */; };
 		27D36514290B3C7100EE085E /* NYC_High_SchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36513290B3C7100EE085E /* NYC_High_SchoolsTests.swift */; };
 		27D3652D290B3DB800EE085E /* SchoolsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3652C290B3DB800EE085E /* SchoolsViewModel.swift */; };
-		27D3652F290B3DE200EE085E /* SchoolDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3652E290B3DE200EE085E /* SchoolDetailsModel.swift */; };
+		27D3652F290B3DE200EE085E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3652E290B3DE200EE085E /* School.swift */; };
 		27D36531290B5D8900EE085E /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36530290B5D8900EE085E /* SchoolTableViewCell.swift */; };
 		27D36535290C246A00EE085E /* ZipCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36534290C246A00EE085E /* ZipCodeViewController.swift */; };
 		27D36537290C683B00EE085E /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36536290C683B00EE085E /* Navigation.swift */; };
@@ -25,6 +25,9 @@
 		27D3654F290E188E00EE085E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3654E290E188E00EE085E /* Endpoint.swift */; };
 		27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36550290E191000EE085E /* SchoolsEndpoint.swift */; };
 		27D36553290E4B8D00EE085E /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36552290E4B8D00EE085E /* CellIdentifiable.swift */; };
+		27D36555290E4CFF00EE085E /* SchoolSATScoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36554290E4CFF00EE085E /* SchoolSATScoresViewModel.swift */; };
+		27D36557290E4EDC00EE085E /* SchoolSATScoresDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36556290E4EDC00EE085E /* SchoolSATScoresDetails.swift */; };
+		27D36559290E52A300EE085E /* SchoolSATScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36558290E52A300EE085E /* SchoolSATScoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,7 @@
 		27D3650F290B3C7100EE085E /* NYC_High_SchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYC_High_SchoolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D36513290B3C7100EE085E /* NYC_High_SchoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYC_High_SchoolsTests.swift; sourceTree = "<group>"; };
 		27D3652C290B3DB800EE085E /* SchoolsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewModel.swift; sourceTree = "<group>"; };
-		27D3652E290B3DE200EE085E /* SchoolDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsModel.swift; sourceTree = "<group>"; };
+		27D3652E290B3DE200EE085E /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		27D36530290B5D8900EE085E /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		27D36534290C246A00EE085E /* ZipCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeViewController.swift; sourceTree = "<group>"; };
 		27D36536290C683B00EE085E /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		27D3654E290E188E00EE085E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		27D36550290E191000EE085E /* SchoolsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsEndpoint.swift; sourceTree = "<group>"; };
 		27D36552290E4B8D00EE085E /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		27D36554290E4CFF00EE085E /* SchoolSATScoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSATScoresViewModel.swift; sourceTree = "<group>"; };
+		27D36556290E4EDC00EE085E /* SchoolSATScoresDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSATScoresDetails.swift; sourceTree = "<group>"; };
+		27D36558290E52A300EE085E /* SchoolSATScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSATScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 			children = (
 				27D36534290C246A00EE085E /* ZipCodeViewController.swift */,
 				27D36500290B3C7000EE085E /* SchoolsViewController.swift */,
+				27D36558290E52A300EE085E /* SchoolSATScoresViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 			children = (
 				27D36547290DB61800EE085E /* ZipCodeViewModel.swift */,
 				27D3652C290B3DB800EE085E /* SchoolsViewModel.swift */,
+				27D36554290E4CFF00EE085E /* SchoolSATScoresViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -195,7 +203,8 @@
 		27D36543290CA55900EE085E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				27D3652E290B3DE200EE085E /* SchoolDetailsModel.swift */,
+				27D3652E290B3DE200EE085E /* School.swift */,
+				27D36556290E4EDC00EE085E /* SchoolSATScoresDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,10 +336,13 @@
 				27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */,
 				27D3654D290E137B00EE085E /* APIManager.swift in Sources */,
 				27D36540290CA4AA00EE085E /* Storyboardable.swift in Sources */,
+				27D36555290E4CFF00EE085E /* SchoolSATScoresViewModel.swift in Sources */,
 				27D36501290B3C7000EE085E /* SchoolsViewController.swift in Sources */,
+				27D36559290E52A300EE085E /* SchoolSATScoresViewController.swift in Sources */,
 				27D36548290DB61800EE085E /* ZipCodeViewModel.swift in Sources */,
+				27D36557290E4EDC00EE085E /* SchoolSATScoresDetails.swift in Sources */,
 				27D3654A290DB68A00EE085E /* Container.swift in Sources */,
-				27D3652F290B3DE200EE085E /* SchoolDetailsModel.swift in Sources */,
+				27D3652F290B3DE200EE085E /* School.swift in Sources */,
 				27D3654F290E188E00EE085E /* Endpoint.swift in Sources */,
 				27D364FD290B3C7000EE085E /* AppDelegate.swift in Sources */,
 			);

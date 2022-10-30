@@ -1,5 +1,5 @@
 //
-//  SchoolDetailsModel.swift
+//  School.swift
 //  NYC_High_Schools
 //
 //  Created by Vishnu Chundi on 10/28/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SchoolDetails: Codable {
+struct School: Codable {
     var dbn: String?
     var schoolName: String?
     var location: String?
@@ -15,6 +15,7 @@ struct SchoolDetails: Codable {
     var email: String?
     
     enum CodingKeys: String, CodingKey {
+        case dbn = "dbn"
         case schoolName = "school_name"
         case location = "location"
         case phoneNumber = "phone_number"

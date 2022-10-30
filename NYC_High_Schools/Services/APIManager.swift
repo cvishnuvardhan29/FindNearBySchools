@@ -25,6 +25,7 @@ class APIManager {
         components.scheme = endpoint.scheme
         components.host = endpoint.baseURL
         components.path = endpoint.path
+        components.queryItems = endpoint.parameters
         
         guard let url = components.url else { return }
         
