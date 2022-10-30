@@ -24,6 +24,7 @@
 		27D3654D290E137B00EE085E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3654C290E137B00EE085E /* APIManager.swift */; };
 		27D3654F290E188E00EE085E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3654E290E188E00EE085E /* Endpoint.swift */; };
 		27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36550290E191000EE085E /* SchoolsEndpoint.swift */; };
+		27D36553290E4B8D00EE085E /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36552290E4B8D00EE085E /* CellIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		27D3654C290E137B00EE085E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		27D3654E290E188E00EE085E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		27D36550290E191000EE085E /* SchoolsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsEndpoint.swift; sourceTree = "<group>"; };
+		27D36552290E4B8D00EE085E /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				27D3653F290CA4AA00EE085E /* Storyboardable.swift */,
 				27D36549290DB68A00EE085E /* Container.swift */,
+				27D36552290E4B8D00EE085E /* CellIdentifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				27D3652D290B3DB800EE085E /* SchoolsViewModel.swift in Sources */,
 				27D36531290B5D8900EE085E /* SchoolTableViewCell.swift in Sources */,
 				27D36535290C246A00EE085E /* ZipCodeViewController.swift in Sources */,
+				27D36553290E4B8D00EE085E /* CellIdentifiable.swift in Sources */,
 				27D36537290C683B00EE085E /* Navigation.swift in Sources */,
 				27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */,
 				27D3654D290E137B00EE085E /* APIManager.swift in Sources */,

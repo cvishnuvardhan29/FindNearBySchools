@@ -42,7 +42,7 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SchoolTableViewCell.identifier, for: indexPath) as? SchoolTableViewCell else { return UITableViewCell() }
         if let school = viewModel?.getSchool(at: indexPath.row) {
-            cell.configureData(for: school, at: indexPath.row)
+            cell.configureData(for: school)
         }
         return cell
     }

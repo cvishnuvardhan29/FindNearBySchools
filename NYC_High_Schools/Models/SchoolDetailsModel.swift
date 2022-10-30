@@ -7,18 +7,17 @@
 
 import Foundation
 
-struct SchoolsResponse: Codable {
-    var schools: [SchoolDetails]
-}
-
 struct SchoolDetails: Codable {
     var dbn: String?
     var schoolName: String?
-    var overviewParagraph: String?
-    var totalStudents: Int?
+    var location: String?
+    var phoneNumber: String?
+    var email: String?
     
     enum CodingKeys: String, CodingKey {
         case schoolName = "school_name"
-        case overviewParagraph = "overview_paragraph"
+        case location = "location"
+        case phoneNumber = "phone_number"
+        case email = "school_email"
     }
 }
