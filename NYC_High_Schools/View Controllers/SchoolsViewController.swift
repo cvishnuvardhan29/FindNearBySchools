@@ -12,12 +12,19 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
     // MARK: - Container Properties
     
     typealias ViewModel = SchoolViewModelType
-    var viewModel: SchoolViewModelType?
+    var viewModel: SchoolViewModelType? {
+        didSet {
+            viewModel?.delegate = self
+        }
+    }
 
     // MARK: - View Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fetching the schools
+        viewModel?.fetchSchools()
     }
 
     // MARK: - Helper Methods
@@ -25,11 +32,9 @@ class SchoolsViewController: UITableViewController, Container, Storyboardable {
     private func registerTableViewCells() {
         self.tableView.register(SchoolTableViewCell.self, forCellReuseIdentifier: SchoolTableViewCell.identifier)
     }
-}
-
-// MARK: - TableView DataSource
-
-extension SchoolsViewController {
+    
+    // MARK: - TableView DataSource
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.getNumberOfSchools() ?? 0
     }
@@ -40,5 +45,17 @@ extension SchoolsViewController {
             cell.configureData(for: school, at: indexPath.row)
         }
         return cell
+    }
+}
+
+extension SchoolsViewController: SchoolsViewModelDelegate {
+    func reloadSchools() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func showFailureError(with error: Error) {
+        // TODO: Handle Error Scenario
     }
 }

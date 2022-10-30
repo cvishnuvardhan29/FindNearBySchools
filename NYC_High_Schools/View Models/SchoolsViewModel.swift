@@ -8,18 +8,51 @@
 import Foundation
 
 protocol SchoolViewModelType {
+    var delegate: SchoolsViewModelDelegate? { get set }
+    
+    func fetchSchools()
     func getSchool(at index: Int) -> SchoolDetails
     func getNumberOfSchools() -> Int
 }
 
+protocol SchoolsViewModelDelegate: AnyObject {
+    func reloadSchools()
+    func showFailureError(with error: Error)
+}
+
 class SchoolsViewModel: SchoolViewModelType {
     // MARK: - Properties
-    var schools: [SchoolDetails] = [SchoolDetails(schoolName: "Clinton School Writers & Artists, M.S. 260",
-                                                  overviewParagraph: "Students who are prepared for college must have an education that encourages them to take risks as they produce and perform. Our college preparatory curriculum develops writers and has built a tight-knit community. Our school develops students who can think analytically and write creatively. Our arts programming builds on our 25 years of experience in visual, performing arts and music on a middle school level. We partner with New Audience and the Whitney Museum as cultural partners. We are a International Baccalaureate (IB) candidate school that offers opportunities to take college courses at neighboring universities.")]
+    var apiManager: APIManager
+    var schools: [SchoolDetails] = []
+    weak var delegate: SchoolsViewModelDelegate?
+    
+    // MARK: - Initializer Method
+    
+    init(apiManager: APIManager = APIManager()) {
+        self.apiManager = apiManager
+    }
+    
+    // MARK: - Methods
+    
+    // Making get near by schools API with dummy Zip Code
+    func fetchSchools() {
+        apiManager.request(endpoint: SchoolsEndpoint.getNearBySchools(zipCode: "10003")) { (result: Result<[SchoolDetails], APIError>) in
+            switch result {
+            case .success(let schools):
+                self.schools = schools
+                self.delegate?.reloadSchools()
+            case .failure(let error):
+                self.delegate?.showFailureError(with: error)
+            }
+        }
+    }
+    
+    // Get School Details for Particular Index
     func getSchool(at index: Int) -> SchoolDetails {
         schools[index]
     }
     
+    // Get Number of Schools
     func getNumberOfSchools() -> Int {
         schools.count
     }

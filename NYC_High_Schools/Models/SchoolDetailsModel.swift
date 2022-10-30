@@ -16,4 +16,9 @@ struct SchoolDetails: Codable {
     var schoolName: String?
     var overviewParagraph: String?
     var totalStudents: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case schoolName = "school_name"
+        case overviewParagraph = "overview_paragraph"
+    }
 }

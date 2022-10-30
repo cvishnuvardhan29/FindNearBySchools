@@ -25,7 +25,7 @@ enum SchoolsEndpoint: Endpoint {
     var path: String {
         switch self {
         case .getNearBySchools:
-            return "/resource/s3k6-pzi2"
+            return "/resource/s3k6-pzi2.json"
         }
     }
     
