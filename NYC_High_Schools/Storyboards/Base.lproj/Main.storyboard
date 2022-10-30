@@ -163,13 +163,105 @@
                     <view key="view" contentMode="scaleToFill" id="zhl-SY-r3Y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uUe-kW-WfK">
+                                <rect key="frame" x="16" y="63.000000000000014" width="358" height="197.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0z-nk-A2i" userLabel="School Name Label">
+                                        <rect key="frame" x="151.66666666666666" y="0.0" width="54.666666666666657" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-dm-rMH">
+                                        <rect key="frame" x="4" y="34.333333333333329" width="350" height="163"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dOv-wc-Ju4" userLabel="Math Score Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="141.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="422" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu5-Ej-kid">
+                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="112"/>
+                                                        <color key="backgroundColor" red="0.74383945118258155" green="0.919103655550215" blue="0.21309059758851565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="112" id="JaM-t8-m58"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Math Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgX-Dv-E5A">
+                                                        <rect key="frame" x="0.0" y="120.00000000000001" width="114" height="21.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZN5-wS-m4f" userLabel="Reading Score Stack View">
+                                                <rect key="frame" x="118" y="0.0" width="114" height="163"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="422" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xp-U1-xzT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="112"/>
+                                                        <color key="backgroundColor" red="0.93021082095425534" green="0.87385929521855876" blue="0.19328799425560836" alpha="0.85236444536423839" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="112" id="xJi-E4-LCf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Reading Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DT-ag-O0Y">
+                                                        <rect key="frame" x="0.0" y="120" width="114" height="43"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Qt-fb-XRT" userLabel="Writing Score Stack View">
+                                                <rect key="frame" x="236" y="0.0" width="114" height="141.66666666666666"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="422" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xc4-HU-baS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="112"/>
+                                                        <color key="backgroundColor" red="0.41210486269243629" green="0.79365249025878082" blue="0.90480430499471798" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="112" id="hio-VK-BBY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Writing Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnG-xX-GWz">
+                                                        <rect key="frame" x="0.0" y="120.00000000000001" width="114" height="21.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lq2-kH-3Wa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uUe-kW-WfK" firstAttribute="top" secondItem="Lq2-kH-3Wa" secondAttribute="top" constant="16" id="AyE-hr-sxf"/>
+                            <constraint firstItem="uUe-kW-WfK" firstAttribute="leading" secondItem="Lq2-kH-3Wa" secondAttribute="leading" constant="16" id="GdA-FU-CqG"/>
+                            <constraint firstItem="Lq2-kH-3Wa" firstAttribute="trailing" secondItem="uUe-kW-WfK" secondAttribute="trailing" constant="16" id="Vhf-vf-AWR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mathScoreLabel" destination="lu5-Ej-kid" id="uSn-KJ-fGh"/>
+                        <outlet property="readingScoreLabel" destination="9xp-U1-xzT" id="U1w-HU-wnn"/>
+                        <outlet property="schoolNameLabel" destination="b0z-nk-A2i" id="xJJ-jg-CeH"/>
+                        <outlet property="writingScoreLabel" destination="Xc4-HU-baS" id="T0R-zT-AhI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVi-3t-jiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3846" y="-21"/>
+            <point key="canvasLocation" x="3844.6153846153843" y="-21.327014218009477"/>
         </scene>
     </scenes>
     <resources>

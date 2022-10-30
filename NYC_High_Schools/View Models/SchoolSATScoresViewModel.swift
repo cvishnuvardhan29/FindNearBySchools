@@ -8,15 +8,25 @@
 import Foundation
 
 protocol SchoolSATScoresViewModelType {
+    var delegate: SchoolSATScoresViewModelDelegate? { get set }
+    
     func fetchSATScores()
+    func getScoreDetails() -> SchoolSATScoresDetails?
+}
+
+protocol SchoolSATScoresViewModelDelegate: AnyObject {
+    func reloadView()
+    func showFailureError(with error: Error)
 }
 
 class SchoolSATScoresViewModel: SchoolSATScoresViewModelType {
     // MARK: - Properties
     
-    var apiManager: APIManager
+    private var apiManager: APIManager
+    private var satScores: SchoolSATScoresDetails?
     var dbn: String
-    var satScores: SchoolSATScoresDetails?
+
+    weak var delegate: SchoolSATScoresViewModelDelegate?
     
     // MARK: - Initializer Method
     
@@ -34,9 +44,14 @@ class SchoolSATScoresViewModel: SchoolSATScoresViewModelType {
             switch result {
             case .success(let scoreDetails):
                 self.satScores = scoreDetails.first
+                self.delegate?.reloadView()
             case .failure(let error):
-                print(error)
+                self.delegate?.showFailureError(with: error)
             }
         }
+    }
+    
+    func getScoreDetails() -> SchoolSATScoresDetails? {
+        satScores
     }
 }
