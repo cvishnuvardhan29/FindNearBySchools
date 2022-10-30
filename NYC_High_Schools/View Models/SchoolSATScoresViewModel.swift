@@ -12,6 +12,7 @@ protocol SchoolSATScoresViewModelType {
     
     func fetchSATScores()
     func getScoreDetails() -> SchoolSATScoresDetails?
+    func getNoScoresErrorText() -> String
 }
 
 protocol SchoolSATScoresViewModelDelegate: AnyObject {
@@ -53,5 +54,9 @@ class SchoolSATScoresViewModel: SchoolSATScoresViewModelType {
     
     func getScoreDetails() -> SchoolSATScoresDetails? {
         satScores
+    }
+    
+    func getNoScoresErrorText() -> String {
+        "No scores available! Please select different school"
     }
 }

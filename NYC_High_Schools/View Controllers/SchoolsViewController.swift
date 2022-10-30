@@ -66,6 +66,6 @@ extension SchoolsViewController: SchoolsViewModelDelegate {
     }
     
     func showFailureError(with error: Error) {
-        // TODO: Handle Error Scenario
+        // TODO: Handle API Error Scenario
     }
 }
