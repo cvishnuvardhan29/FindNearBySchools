@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct SchoolsResponse: Codable {
+    var schools: [SchoolDetails]
+}
+
 struct SchoolDetails: Codable {
     var dbn: String?
     var schoolName: String?

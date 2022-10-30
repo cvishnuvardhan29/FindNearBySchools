@@ -21,6 +21,9 @@
 		27D36540290CA4AA00EE085E /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3653F290CA4AA00EE085E /* Storyboardable.swift */; };
 		27D36548290DB61800EE085E /* ZipCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36547290DB61800EE085E /* ZipCodeViewModel.swift */; };
 		27D3654A290DB68A00EE085E /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36549290DB68A00EE085E /* Container.swift */; };
+		27D3654D290E137B00EE085E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3654C290E137B00EE085E /* APIManager.swift */; };
+		27D3654F290E188E00EE085E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3654E290E188E00EE085E /* Endpoint.swift */; };
+		27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36550290E191000EE085E /* SchoolsEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		27D3653F290CA4AA00EE085E /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		27D36547290DB61800EE085E /* ZipCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeViewModel.swift; sourceTree = "<group>"; };
 		27D36549290DB68A00EE085E /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		27D3654C290E137B00EE085E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		27D3654E290E188E00EE085E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		27D36550290E191000EE085E /* SchoolsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		27D364FB290B3C7000EE085E /* NYC_High_Schools */ = {
 			isa = PBXGroup;
 			children = (
+				27D3654B290E135C00EE085E /* Services */,
 				27D3653A290C9AA700EE085E /* Application Delegate */,
 				27D36539290C9A6500EE085E /* View Controllers */,
 				27D36544290CA59400EE085E /* Coordinators */,
@@ -196,6 +203,16 @@
 				27D36536290C683B00EE085E /* Navigation.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		27D3654B290E135C00EE085E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27D3654C290E137B00EE085E /* APIManager.swift */,
+				27D3654E290E188E00EE085E /* Endpoint.swift */,
+				27D36550290E191000EE085E /* SchoolsEndpoint.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,11 +320,14 @@
 				27D36531290B5D8900EE085E /* SchoolTableViewCell.swift in Sources */,
 				27D36535290C246A00EE085E /* ZipCodeViewController.swift in Sources */,
 				27D36537290C683B00EE085E /* Navigation.swift in Sources */,
+				27D36551290E191000EE085E /* SchoolsEndpoint.swift in Sources */,
+				27D3654D290E137B00EE085E /* APIManager.swift in Sources */,
 				27D36540290CA4AA00EE085E /* Storyboardable.swift in Sources */,
 				27D36501290B3C7000EE085E /* SchoolsViewController.swift in Sources */,
 				27D36548290DB61800EE085E /* ZipCodeViewModel.swift in Sources */,
 				27D3654A290DB68A00EE085E /* Container.swift in Sources */,
 				27D3652F290B3DE200EE085E /* SchoolDetailsModel.swift in Sources */,
+				27D3654F290E188E00EE085E /* Endpoint.swift in Sources */,
 				27D364FD290B3C7000EE085E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
