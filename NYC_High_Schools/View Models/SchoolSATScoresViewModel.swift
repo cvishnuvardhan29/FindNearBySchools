@@ -23,9 +23,9 @@ protocol SchoolSATScoresViewModelDelegate: AnyObject {
 class SchoolSATScoresViewModel: SchoolSATScoresViewModelType {
     // MARK: - Properties
     
-    private var apiManager: APIManager
-    private var satScores: SchoolSATScoresDetails?
-    var dbn: String
+    var apiManager: APIManager
+    var satScores: SchoolSATScoresDetails?
+    private var dbn: String
 
     weak var delegate: SchoolSATScoresViewModelDelegate?
     

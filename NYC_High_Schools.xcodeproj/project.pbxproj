@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		27C3C8B9290EDEB100DFB2C5 /* ScoresLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8B8290EDEB100DFB2C5 /* ScoresLabel.swift */; };
 		27C3C8BB290EF26600DFB2C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8BA290EF26600DFB2C5 /* MainViewController.swift */; };
+		27C3C8BD290F0C7F00DFB2C5 /* SchoolsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8BC290F0C7F00DFB2C5 /* SchoolsViewModelTests.swift */; };
+		27C3C8C0290F3AD300DFB2C5 /* MockSchoolsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8BF290F3AD300DFB2C5 /* MockSchoolsService.swift */; };
+		27C3C8C2290F3C2600DFB2C5 /* SchoolSATScoresViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8C1290F3C2600DFB2C5 /* SchoolSATScoresViewModelTests.swift */; };
 		27D364FD290B3C7000EE085E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D364FC290B3C7000EE085E /* AppDelegate.swift */; };
 		27D36501290B3C7000EE085E /* SchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36500290B3C7000EE085E /* SchoolsViewController.swift */; };
 		27D36504290B3C7000EE085E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D36502290B3C7000EE085E /* Main.storyboard */; };
 		27D36506290B3C7100EE085E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D36505290B3C7100EE085E /* Assets.xcassets */; };
 		27D36509290B3C7100EE085E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D36507290B3C7100EE085E /* LaunchScreen.storyboard */; };
-		27D36514290B3C7100EE085E /* NYC_High_SchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36513290B3C7100EE085E /* NYC_High_SchoolsTests.swift */; };
 		27D3652D290B3DB800EE085E /* SchoolsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3652C290B3DB800EE085E /* SchoolsViewModel.swift */; };
 		27D3652F290B3DE200EE085E /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3652E290B3DE200EE085E /* School.swift */; };
 		27D36531290B5D8900EE085E /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36530290B5D8900EE085E /* SchoolTableViewCell.swift */; };
@@ -45,6 +47,9 @@
 /* Begin PBXFileReference section */
 		27C3C8B8290EDEB100DFB2C5 /* ScoresLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresLabel.swift; sourceTree = "<group>"; };
 		27C3C8BA290EF26600DFB2C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		27C3C8BC290F0C7F00DFB2C5 /* SchoolsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewModelTests.swift; sourceTree = "<group>"; };
+		27C3C8BF290F3AD300DFB2C5 /* MockSchoolsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSchoolsService.swift; sourceTree = "<group>"; };
+		27C3C8C1290F3C2600DFB2C5 /* SchoolSATScoresViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSATScoresViewModelTests.swift; sourceTree = "<group>"; };
 		27D364F9290B3C7000EE085E /* NYC_High_Schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYC_High_Schools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D364FC290B3C7000EE085E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D36500290B3C7000EE085E /* SchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		27D36508290B3C7100EE085E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D3650A290B3C7100EE085E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27D3650F290B3C7100EE085E /* NYC_High_SchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYC_High_SchoolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27D36513290B3C7100EE085E /* NYC_High_SchoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYC_High_SchoolsTests.swift; sourceTree = "<group>"; };
 		27D3652C290B3DB800EE085E /* SchoolsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewModel.swift; sourceTree = "<group>"; };
 		27D3652E290B3DE200EE085E /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		27D36530290B5D8900EE085E /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27C3C8BE290F3ABB00DFB2C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				27C3C8BF290F3AD300DFB2C5 /* MockSchoolsService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		27D364F0290B3C7000EE085E = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +140,9 @@
 		27D36512290B3C7100EE085E /* NYC_High_SchoolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				27D36513290B3C7100EE085E /* NYC_High_SchoolsTests.swift */,
+				27C3C8BE290F3ABB00DFB2C5 /* Mocks */,
+				27C3C8BC290F0C7F00DFB2C5 /* SchoolsViewModelTests.swift */,
+				27C3C8C1290F3C2600DFB2C5 /* SchoolSATScoresViewModelTests.swift */,
 			);
 			path = NYC_High_SchoolsTests;
 			sourceTree = "<group>";
@@ -360,7 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D36514290B3C7100EE085E /* NYC_High_SchoolsTests.swift in Sources */,
+				27C3C8BD290F0C7F00DFB2C5 /* SchoolsViewModelTests.swift in Sources */,
+				27C3C8C2290F3C2600DFB2C5 /* SchoolSATScoresViewModelTests.swift in Sources */,
+				27C3C8C0290F3AD300DFB2C5 /* MockSchoolsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
